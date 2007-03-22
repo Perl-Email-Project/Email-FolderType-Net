@@ -3,7 +3,7 @@ package Email::FolderType::Net;
 use strict;
 
 use vars qw[$VERSION];
-$VERSION = '1.04';
+$VERSION = '1.041';
 
 use URI;
 
@@ -83,6 +83,12 @@ __END__
 L<Email::FolderType>,
 L<Email::FolderType::Local>,
 L<URI>.
+
+=head1 PERL EMAIL PROJECT
+
+This module is maintained by the Perl Email Project
+
+L<http://emailproject.perl.org/wiki/Email::FolderType::Net>
 
 =head1 AUTHOR
 
