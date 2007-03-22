@@ -1,0 +1,46 @@
+NAME
+    Email::FolderType::Net - Recognize folder types for network based
+    message protocols.
+
+SYNOPSIS
+      use Email::FolderType qw[folder_type];
+
+      my $type = folder_type($folder) || 'unknown';
+      print "$folder is type $type.\n";
+
+  DESCRIPTION
+    Registers several mail folder types that are known as network based
+    messaging protocols. Folder names for these protocols shoudl be
+    specified using a URI syntax.
+
+  IMAP
+      print 'IMAP' if folder_type('imap://foo.com/folder') eq 'IMAP';
+
+    Returns this folder type if the scheme is "imap".
+
+  IMAPS
+      print 'IMAPS' if folder_type('imaps://example.com') eq 'IMAPS';
+
+    Returns this folder type if the scheme is "imaps".
+
+  POP3
+      print 'POP3' if folder_type('pop3://example.com:110') eq 'POP3';
+
+    Returns this folder type if the schem is "pop" or "pop3".
+
+  POP3S
+      print 'POP3S' if folder_type('pops://foo.com') eq 'POP3S';
+
+    returns this folder type if the scheme is "pops" or "pop3s".
+
+SEE ALSO
+    Email::FolderType, Email::FolderType::Local, URI.
+
+AUTHOR
+    Casey West <casey@geeknest.com>.
+
+COPYRIGHT
+      Copyright (c) 2004 Casey West.  All rights reserved.
+      This module is free software; you can redistribute it and/or modify it
+      under the same terms as Perl itself.
+
