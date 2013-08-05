@@ -1,15 +1,9 @@
-package Email::FolderType::Net;
-# $Id: Net.pm,v 1.4 2005/05/04 02:13:08 cwest Exp $
 use strict;
+use warnings;
+package Email::FolderType::Net;
+# ABSTRACT: Recognize folder types for network based message protocols.
 
-use vars qw[$VERSION];
-$VERSION = '1.041';
-
-use URI;
-
-=head1 NAME
-
-Email::FolderType::Net - Recognize folder types for network based message protocols.
+use URI 1.35;
 
 =head1 SYNOPSIS
 
@@ -76,28 +70,8 @@ package Email::FolderType::POP3;
 package Email::FolderType::POP3S;
 *match = Email::FolderType::Net::_create_match(qw[pops pop3s]);
 
-__END__
-
 =head1 SEE ALSO
 
 L<Email::FolderType>,
 L<Email::FolderType::Local>,
 L<URI>.
-
-=head1 PERL EMAIL PROJECT
-
-This module is maintained by the Perl Email Project
-
-L<http://emailproject.perl.org/wiki/Email::FolderType::Net>
-
-=head1 AUTHOR
-
-Casey West <F<casey@geeknest.com>>.
-
-=head1 COPYRIGHT
-
-  Copyright (c) 2004 Casey West.  All rights reserved.
-  This module is free software; you can redistribute it and/or modify it
-  under the same terms as Perl itself.
-
-=cut
