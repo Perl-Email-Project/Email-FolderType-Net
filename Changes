@@ -1,6 +1,8 @@
 Release history for Email-FolderType-Net
 
 {{$NEXT}}
+
+1.043     2013-08-08 20:35:28 America/New_York
           avoid spewing warnings from (lc undef)
 
 1.042     2013-08-05 18:56:10 America/New_York
