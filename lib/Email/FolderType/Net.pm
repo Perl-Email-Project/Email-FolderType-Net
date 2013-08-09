@@ -47,6 +47,7 @@ returns this folder type if the scheme is C<pops> or C<pop3s>.
 sub _from_scheme {
     my $scheme = shift;
     my $uri    = URI->new(shift);
+    return unless $uri->scheme;
     return 1 if lc($uri->scheme) eq $scheme;
     return;
 }
